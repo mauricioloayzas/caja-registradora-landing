@@ -1,0 +1,73 @@
+DEPLOY DE clichin-landing (política de privacidad, términos, landing)
+=============================================================
+
+QUÉ ES ESTO
+-------------------------------------------------------------
+Proyecto Nuxt mínimo, separado de booking-ssr, solo con contenido
+estático (landing + política de privacidad + términos). Sirve para
+tener YA una URL HTTPS pública que darle a Meta al configurar la app
+de WhatsApp Cloud API, sin depender de que el dominio clichin.app
+esté conectado en Route53 todavía.
+
+Se genera como HTML estático (nuxt generate) y se sirve directo
+desde S3 + CloudFront (sin Lambda, no hace falta porque no hay nada
+dinámico).
+
+ANTES DE DEPLOYAR
+-------------------------------------------------------------
+1. Completar los placeholders [COMPLETAR ...] en:
+   - pages/politica-privacidad.vue (email de contacto, razón social/RUC, fecha)
+   - pages/terminos.vue (mismo)
+2. npm install
+
+PASOS DE DEPLOY (dev o prod)
+-------------------------------------------------------------
+npm run deploy:dev
+  (o npm run deploy:prod)
+
+Esto hace: nuxt generate -> sube .output/public a S3 -> sls deploy
+(crea el bucket S3 privado + la distribución de CloudFront si no
+existen).
+
+La primera vez que corras `sls deploy`, CloudFormation crea la
+distribución de CloudFront - tarda varios minutos (es normal). Al
+terminar, el output "CloudFrontUrl" te da la URL a usar, algo como:
+
+  https://dXXXXXXXXXXXXX.cloudfront.net
+
+Esa URL YA es HTTPS válida. Podés usar:
+  https://dXXXXXXXXXXXXX.cloudfront.net/politica-privacidad
+como Privacy Policy URL en la configuración de la app de Meta,
+y https://dXXXXXXXXXXXXX.cloudfront.net/terminos como Terms of
+Service URL, sin esperar a tener el dominio final conectado.
+
+CONECTAR EL DOMINIO clichin.app MÁS ADELANTE (opcional, cuando lo tengas en Route53)
+-------------------------------------------------------------
+1. Si clichin.app no está en Route53 todavía, hay que migrar el
+   registro del dominio (o al menos delegar los nameservers) a
+   Route53 primero.
+2. Pedir un certificado ACM para clichin.app (y www.clichin.app si
+   aplica) EN LA REGIÓN us-east-1 (obligatorio para CloudFront,
+   sin importar en qué región esté el resto de la infra).
+3. Validar el certificado (DNS validation, se agrega un registro CNAME
+   en Route53 - ACM lo sugiere automáticamente).
+4. Una vez emitido el certificado: agregar en serverless.yml, dentro
+   de LandingDistribution.Properties.DistributionConfig:
+     Aliases: [clichin.app]
+     ViewerCertificate:
+       AcmCertificateArn: <arn del certificado>
+       SslSupportMethod: sni-only
+5. Crear un registro Route53 tipo A (Alias) apuntando clichin.app a
+   la distribución de CloudFront.
+6. Volver a correr `npm run deploy:prod`.
+
+Una vez conectado el dominio real, actualizar en Meta la Privacy
+Policy URL / Terms of Service URL a https://clichin.app/... (Meta
+permite cambiarla después sin perder la app ya creada).
+
+NOTA SOBRE agenda.clichin.app (booking-ssr)
+-------------------------------------------------------------
+booking-ssr quedó configurado para vivir en agenda.clichin.app (ver
+serverless.yml/.env.example de ese proyecto) para dejar clichin.app
+libre para este landing. Mismo proceso de ACM+Route53 aplica ahí
+cuando se conecte ese subdominio.

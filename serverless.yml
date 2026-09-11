@@ -1,0 +1,103 @@
+service: clichin-landing
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  region: us-east-1
+
+custom:
+  assetsBucket:
+    dev: clichin-landing-assets-dev
+    prod: clichin-landing-assets-prod
+  # clichin.app solo se conecta en prod (certificado ACM ya validado). dev sigue
+  # usando únicamente el dominio *.cloudfront.net por defecto.
+  aliases:
+    dev: []
+    prod:
+      - clichin.app
+      - www.clichin.app
+  viewerCertificate:
+    dev:
+      CloudFrontDefaultCertificate: true
+    prod:
+      AcmCertificateArn: arn:aws:acm:us-east-1:996197173188:certificate/1983d8fa-d9e9-42b9-8859-cc7f9abc776e
+      SslSupportMethod: sni-only
+      MinimumProtocolVersion: TLSv1.2_2021
+
+resources:
+  Resources:
+    LandingBucket:
+      Type: AWS::S3::Bucket
+      DeletionPolicy: Retain
+      UpdateReplacePolicy: Retain
+      Properties:
+        BucketName: ${self:custom.assetsBucket.${sls:stage}}
+        PublicAccessBlockConfiguration:
+          BlockPublicAcls: true
+          BlockPublicPolicy: true
+          IgnorePublicAcls: true
+          RestrictPublicBuckets: true
+
+    LandingOriginAccessControl:
+      Type: AWS::CloudFront::OriginAccessControl
+      Properties:
+        OriginAccessControlConfig:
+          Name: ${self:custom.assetsBucket.${sls:stage}}-oac
+          OriginAccessControlOriginType: s3
+          SigningBehavior: always
+          SigningProtocol: sigv4
+
+    LandingDistribution:
+      Type: AWS::CloudFront::Distribution
+      Properties:
+        DistributionConfig:
+          Enabled: true
+          DefaultRootObject: index.html
+          PriceClass: PriceClass_100
+          Aliases: ${self:custom.aliases.${sls:stage}}
+          ViewerCertificate: ${self:custom.viewerCertificate.${sls:stage}}
+          # Nuxt genera páginas estáticas como /politica-privacidad/index.html — sin un
+          # custom error response, S3/CloudFront devolvería 403/404 al pedir la ruta sin
+          # slash final. También sirve como fallback simple a la home si algo no existe.
+          CustomErrorResponses:
+            - ErrorCode: 403
+              ResponseCode: 200
+              ResponsePagePath: /index.html
+            - ErrorCode: 404
+              ResponseCode: 200
+              ResponsePagePath: /index.html
+          Origins:
+            - Id: LandingBucketOrigin
+              DomainName: !GetAtt LandingBucket.RegionalDomainName
+              OriginAccessControlId: !Ref LandingOriginAccessControl
+              S3OriginConfig:
+                OriginAccessIdentity: ''
+          DefaultCacheBehavior:
+            TargetOriginId: LandingBucketOrigin
+            ViewerProtocolPolicy: redirect-to-https
+            AllowedMethods: [GET, HEAD]
+            CachedMethods: [GET, HEAD]
+            CachePolicyId: 658327ea-f89d-4fab-a63d-7e88639e58f6 # AWS managed: CachingOptimized
+            Compress: true
+
+    LandingBucketPolicy:
+      Type: AWS::S3::BucketPolicy
+      Properties:
+        Bucket: !Ref LandingBucket
+        PolicyDocument:
+          Statement:
+            - Effect: Allow
+              Principal:
+                Service: cloudfront.amazonaws.com
+              Action: 's3:GetObject'
+              Resource: !Sub '${LandingBucket.Arn}/*'
+              Condition:
+                StringEquals:
+                  'AWS:SourceArn': !Sub 'arn:aws:cloudfront::${AWS::AccountId}:distribution/${LandingDistribution}'
+
+  Outputs:
+    CloudFrontUrl:
+      Value: !Sub 'https://${LandingDistribution.DomainName}'
+    DistributionId:
+      Value: !Ref LandingDistribution

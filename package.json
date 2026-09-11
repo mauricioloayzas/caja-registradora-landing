@@ -1,0 +1,20 @@
+{
+  "name": "clichin-landing",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "deploy:dev": "nuxt generate && AWS_PROFILE=mauloasan npx sls deploy --stage dev && AWS_PROFILE=mauloasan aws s3 sync .output/public/ s3://clichin-landing-assets-dev/ --delete && AWS_PROFILE=mauloasan aws cloudfront create-invalidation --distribution-id $(AWS_PROFILE=mauloasan aws cloudformation describe-stacks --region us-east-1 --stack-name clichin-landing-dev --query \"Stacks[0].Outputs[?OutputKey=='DistributionId'].OutputValue\" --output text) --paths '/*'",
+    "deploy:prod": "nuxt generate && AWS_PROFILE=mauloasan npx sls deploy --stage prod && AWS_PROFILE=mauloasan aws s3 sync .output/public/ s3://clichin-landing-assets-prod/ --delete && AWS_PROFILE=mauloasan aws cloudfront create-invalidation --distribution-id $(AWS_PROFILE=mauloasan aws cloudformation describe-stacks --region us-east-1 --stack-name clichin-landing-prod --query \"Stacks[0].Outputs[?OutputKey=='DistributionId'].OutputValue\" --output text) --paths '/*'"
+  },
+  "dependencies": {
+    "nuxt": "^3.21.2"
+  },
+  "devDependencies": {
+    "serverless": "^3.38.0",
+    "typescript": "^5.0.0"
+  }
+}
