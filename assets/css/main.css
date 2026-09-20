@@ -321,6 +321,23 @@ footer .footer-note {
   font-size: 0.8rem;
 }
 
+footer .social-links {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.9rem;
+}
+
+footer .social-links a {
+  display: inline-flex;
+  color: var(--brand-gray);
+  transition: color 0.15s;
+}
+
+footer .social-links a:hover,
+footer .social-links a:focus-visible {
+  color: #ff914d;
+}
+
 a {
   color: inherit;
 }
