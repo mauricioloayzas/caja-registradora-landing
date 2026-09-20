@@ -43,18 +43,19 @@ useSeoMeta({
 
     <section class="section">
       <h2>Planes</h2>
-      <p>Elegí el plan según lo que necesita tu negocio. Todos incluyen facturación electrónica SRI, contabilidad NIIF e inventario como base.</p>
+      <p>Elegí el plan según lo que necesita tu negocio. Todos incluyen facturación electrónica SRI, contabilidad NIIF e inventario como base, con <strong>usuarios de tu equipo y mensajes de WhatsApp ilimitados</strong>, sin topes por volumen.</p>
+      <p class="plans-tax-note"><strong>Todos los precios son más impuestos (IVA).</strong></p>
       <div class="plans-grid">
         <div class="plan-card">
           <span class="plan-badge">Facturación + Inventario</span>
           <h3 class="plan-name">Negocio</h3>
-          <p class="plan-price">$4.99<span>/mes</span></p>
-          <p class="plan-price-alt">o $49.00/año (ahorrás 2 meses)</p>
+          <p class="plan-price">$4.99<span>/mes + impuestos</span></p>
+          <p class="plan-price-alt">o $49.00/año + impuestos (ahorrás 2 meses)</p>
           <p class="plan-audience">Comercios y tiendas que solo necesitan facturar y controlar stock.</p>
           <ul>
             <li>Facturación electrónica SRI: facturas, notas de crédito y débito, guías de remisión, retenciones y liquidaciones de compra</li>
             <li>Proformas, con conversión a factura en un clic</li>
-            <li>Envío de tus comprobantes por email y WhatsApp</li>
+            <li>Envío de tus comprobantes por email y WhatsApp, sin límite de mensajes</li>
             <li>Contabilidad NIIF: plan de cuentas, asientos automáticos y estados financieros para la Superintendencia de Compañías</li>
             <li>Inventario: productos, bodegas, proveedores y movimientos de stock</li>
             <li>Reportes</li>
@@ -64,23 +65,23 @@ useSeoMeta({
         <div class="plan-card plan-dark">
           <span class="plan-badge">Negocio + Agenda</span>
           <h3 class="plan-name">Profesional</h3>
-          <p class="plan-price">$9.99<span>/mes</span></p>
-          <p class="plan-price-alt">o $99.00/año (ahorrás 2 meses)</p>
+          <p class="plan-price">$9.99<span>/mes + impuestos</span></p>
+          <p class="plan-price-alt">o $99.00/año + impuestos (ahorrás 2 meses)</p>
           <p class="plan-audience">Para negocios que atienden con cita: abogados, arquitectos y consultores — y también <strong>centros de belleza y estética</strong>: barberías, salones de manicure, peluquerías y spas.</p>
           <ul>
             <li>Todo lo del plan Negocio</li>
             <li>Portal público de agendamiento para que tus clientes reserven solos</li>
             <li>Confirmación y recordatorios automáticos de cada cita</li>
             <li>Gestión de casos/expedientes, anticipos e hitos</li>
-            <li>Equipo con roles (Staff)</li>
+            <li>Equipo con roles (Staff): usuarios ilimitados</li>
           </ul>
         </div>
 
         <div class="plan-card">
           <span class="plan-badge">Agenda + Historia clínica</span>
           <h3 class="plan-name">Salud</h3>
-          <p class="plan-price">$19.99<span>/mes</span></p>
-          <p class="plan-price-alt">o $199.00/año (ahorrás 2 meses)</p>
+          <p class="plan-price">$25.00<span>/mes + impuestos</span></p>
+          <p class="plan-price-alt">o $250.00/año + impuestos (ahorrás 2 meses)</p>
           <p class="plan-audience">Consultorios y clínicas.</p>
           <ul>
             <li>Todo lo del plan Profesional</li>

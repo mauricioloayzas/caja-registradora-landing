@@ -264,6 +264,15 @@ h3 {
   color: #cfcfcf;
 }
 
+.plans-tax-note {
+  display: inline-block;
+  margin: 0 0 1.25rem;
+  padding: 0.35rem 0.8rem;
+  border: 1px solid var(--brand-gray);
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
 .plan-price-alt {
   font-size: 0.8rem;
   color: var(--brand-gray);
