@@ -48,6 +48,28 @@ resources:
           SigningBehavior: always
           SigningProtocol: sigv4
 
+    # S3 (con OAC) no resuelve "/terminos" a "terminos/index.html": daba 403 y el error
+    # personalizado devolvía la home. Esta función reescribe las rutas sin extensión.
+    LandingIndexRewriteFunction:
+      Type: AWS::CloudFront::Function
+      Properties:
+        Name: clichin-landing-${sls:stage}-index-rewrite
+        AutoPublish: true
+        FunctionConfig:
+          Comment: Reescribe /ruta y /ruta/ a /ruta/index.html
+          Runtime: cloudfront-js-2.0
+        FunctionCode: |
+          function handler(event) {
+            var request = event.request;
+            var uri = request.uri;
+            if (uri.endsWith('/')) {
+              request.uri = uri + 'index.html';
+            } else if (uri.split('/').pop().indexOf('.') === -1) {
+              request.uri = uri + '/index.html';
+            }
+            return request;
+          }
+
     LandingDistribution:
       Type: AWS::CloudFront::Distribution
       Properties:
@@ -80,6 +102,9 @@ resources:
             CachedMethods: [GET, HEAD]
             CachePolicyId: 658327ea-f89d-4fab-a63d-7e88639e58f6 # AWS managed: CachingOptimized
             Compress: true
+            FunctionAssociations:
+              - EventType: viewer-request
+                FunctionARN: !GetAtt LandingIndexRewriteFunction.FunctionMetadata.FunctionARN
 
     LandingBucketPolicy:
       Type: AWS::S3::BucketPolicy
