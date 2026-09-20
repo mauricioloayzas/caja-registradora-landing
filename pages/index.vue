@@ -80,8 +80,8 @@ useSeoMeta({
         <div class="plan-card">
           <span class="plan-badge">Agenda + Historia clínica</span>
           <h3 class="plan-name">Salud</h3>
-          <p class="plan-price">$25.00<span>/mes + impuestos</span></p>
-          <p class="plan-price-alt">o $250.00/año + impuestos (ahorrás 2 meses)</p>
+          <p class="plan-price">$24.99<span>/mes + impuestos</span></p>
+          <p class="plan-price-alt">o $249.00/año + impuestos (ahorrás 2 meses)</p>
           <p class="plan-audience">Consultorios y clínicas.</p>
           <ul>
             <li>Todo lo del plan Profesional</li>
