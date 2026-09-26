@@ -28,7 +28,7 @@ useSeoMeta({
         </div>
         <div class="card">
           <h3>Inventario</h3>
-          <p>Productos, bodegas, proveedores y movimientos de stock conectados directamente con lo que facturás.</p>
+          <p>Productos, bodegas, proveedores y movimientos de stock conectados directamente con lo que facturas.</p>
         </div>
         <div class="card">
           <h3>Agendamiento de citas</h3>
@@ -43,14 +43,14 @@ useSeoMeta({
 
     <section class="section">
       <h2>Planes</h2>
-      <p>Elegí el plan según lo que necesita tu negocio. Todos incluyen facturación electrónica SRI, contabilidad NIIF e inventario como base, con <strong>usuarios de tu equipo y mensajes de WhatsApp ilimitados</strong>, sin topes por volumen.</p>
+      <p>Elige el plan según lo que necesita tu negocio. Todos incluyen facturación electrónica SRI, contabilidad NIIF e inventario como base, con <strong>usuarios de tu equipo y mensajes de WhatsApp ilimitados</strong>, sin topes por volumen.</p>
       <p class="plans-tax-note"><strong>Todos los precios son más impuestos (IVA).</strong></p>
       <div class="plans-grid">
         <div class="plan-card">
           <span class="plan-badge">Facturación + Inventario</span>
           <h3 class="plan-name">Negocio</h3>
           <p class="plan-price">$4.99<span>/mes + impuestos</span></p>
-          <p class="plan-price-alt">o $49.00/año + impuestos (ahorrás 2 meses)</p>
+          <p class="plan-price-alt">o $49.00/año + impuestos (ahorras 2 meses)</p>
           <p class="plan-audience">Comercios y tiendas que solo necesitan facturar y controlar stock.</p>
           <ul>
             <li>Facturación electrónica SRI: facturas, notas de crédito y débito, guías de remisión, retenciones y liquidaciones de compra</li>
@@ -66,7 +66,7 @@ useSeoMeta({
           <span class="plan-badge">Negocio + Agenda</span>
           <h3 class="plan-name">Profesional</h3>
           <p class="plan-price">$9.99<span>/mes + impuestos</span></p>
-          <p class="plan-price-alt">o $99.00/año + impuestos (ahorrás 2 meses)</p>
+          <p class="plan-price-alt">o $99.00/año + impuestos (ahorras 2 meses)</p>
           <p class="plan-audience">Para negocios que atienden con cita: abogados, arquitectos y consultores — y también <strong>centros de belleza y estética</strong>: barberías, salones de manicure, peluquerías y spas.</p>
           <ul>
             <li>Todo lo del plan Negocio</li>
@@ -81,7 +81,7 @@ useSeoMeta({
           <span class="plan-badge">Agenda + Historia clínica</span>
           <h3 class="plan-name">Salud</h3>
           <p class="plan-price">$24.99<span>/mes + impuestos</span></p>
-          <p class="plan-price-alt">o $249.00/año + impuestos (ahorrás 2 meses)</p>
+          <p class="plan-price-alt">o $249.00/año + impuestos (ahorras 2 meses)</p>
           <p class="plan-audience">Consultorios y clínicas.</p>
           <ul>
             <li>Todo lo del plan Profesional</li>
@@ -95,14 +95,14 @@ useSeoMeta({
 
     <section class="section">
       <h2>Complementos</h2>
-      <p>Sumá funciones extra sobre tu plan activo, según el rubro de tu negocio.</p>
-      <p class="plans-tax-note"><strong>Los complementos no se contratan solos</strong> — necesitás tener un plan (Negocio, Profesional o Salud) activo para poder agregarlos.</p>
+      <p>Suma funciones extra sobre tu plan activo, según el rubro de tu negocio.</p>
+      <p class="plans-tax-note"><strong>Los complementos no se contratan solos</strong> — necesitas tener un plan (Negocio, Profesional o Salud) activo para poder agregarlos.</p>
       <div class="plans-grid">
         <div class="plan-card">
           <span class="plan-badge">Complemento</span>
           <h3 class="plan-name">Tienda online</h3>
           <p class="plan-price">$4.99<span>/mes + impuestos</span></p>
-          <p class="plan-audience">Vendé tus productos en línea con carrito de compras.</p>
+          <p class="plan-audience">Vende tus productos en línea con carrito de compras.</p>
           <ul>
             <li>Tienda pública con carrito de compras, lista para compartir con tus clientes</li>
             <li>Facturación y asiento contable automáticos al confirmarse cada pago</li>
@@ -115,7 +115,7 @@ useSeoMeta({
           <p class="plan-price">$4.99<span>/mes + impuestos</span></p>
           <p class="plan-audience">Para imprentas, talleres de estampado, floristerías y fábricas artesanales.</p>
           <ul>
-            <li>Recibí y gestioná pedidos de trabajo a medida, desde tu panel o desde un formulario público</li>
+            <li>Recibe y gestiona pedidos de trabajo a medida, desde tu panel o desde un formulario público</li>
             <li>Plantilla de columnas configurable según lo que necesites registrar de cada pedido</li>
           </ul>
         </div>
@@ -127,11 +127,11 @@ useSeoMeta({
         <span class="badge">Para contadores</span>
         <p class="plan-price">$0<span>/siempre</span></p>
         <h2>El panel administrativo es gratis, siempre</h2>
-        <p>Si sos contador y llevás la contabilidad de varios negocios, Clichín no te cobra por administrar tus clientes desde el panel.</p>
+        <p>Si eres contador y llevas la contabilidad de varios negocios, Clichín no te cobra por administrar tus clientes desde el panel.</p>
         <ul>
-          <li><strong>Una sola cuenta para todos tus clientes.</strong> Te registrás una vez como contador y desde ahí creás y administrás el perfil de cada empresa que llevás.</li>
+          <li><strong>Una sola cuenta para todos tus clientes.</strong> Te registras una vez como contador y desde ahí creas y administras el perfil de cada empresa que llevas.</li>
           <li><strong>Cambio rápido entre empresas.</strong> Un selector en el panel te deja saltar de una empresa a otra sin cerrar sesión ni volver a autenticarte.</li>
-          <li><strong>Cada empresa queda independiente.</strong> Su propia facturación electrónica SRI, su propio inventario, su propia agenda y sus propios clientes — vos solo administrás el acceso.</li>
+          <li><strong>Cada empresa queda independiente.</strong> Su propia facturación electrónica SRI, su propio inventario, su propia agenda y sus propios clientes — tú solo administras el acceso.</li>
           <li><strong>Acceso administrativo sin costo.</strong> El uso del panel para gestionar a tus clientes como contador no tiene cargo.</li>
         </ul>
       </div>

@@ -63,7 +63,7 @@ useSeoMeta({
 
     <h2>5. Tus derechos</h2>
     <p>
-      Podés solicitar acceso, corrección o eliminación de tus datos personales escribiendo a
+      Puedes solicitar acceso, corrección o eliminación de tus datos personales escribiendo a
       <a href="mailto:clichinapp@mauloasan.com">clichinapp@mauloasan.com</a>. Responderemos
       conforme a lo previsto en la Ley Orgánica de Protección de Datos Personales de Ecuador.
     </p>

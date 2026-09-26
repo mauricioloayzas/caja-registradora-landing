@@ -12,18 +12,18 @@ useSeoMeta({
 
     <p>
       Si interactuaste con algún negocio que usa Clichín (por ejemplo, al agendar una cita o
-      recibir una factura) y querés que eliminemos tus datos personales, seguí estos pasos.
+      recibir una factura) y quieres que eliminemos tus datos personales, sigue estos pasos.
     </p>
 
     <h2>1. Cómo solicitar la eliminación</h2>
     <p>
-      Enviá un correo a <a href="mailto:clichinapp@mauloasan.com">clichinapp@mauloasan.com</a>
+      Envía un correo a <a href="mailto:clichinapp@mauloasan.com">clichinapp@mauloasan.com</a>
       con el asunto "Eliminación de datos", indicando:
     </p>
     <ul>
       <li>Tu nombre completo.</li>
       <li>Tu cédula o RUC (con el que quedaste registrado).</li>
-      <li>El nombre del negocio con el que interactuaste, si lo recordás (nos ayuda a ubicar tu registro más rápido).</li>
+      <li>El nombre del negocio con el que interactuaste, si lo recuerdas (nos ayuda a ubicar tu registro más rápido).</li>
     </ul>
 
     <h2>2. Qué se elimina</h2>

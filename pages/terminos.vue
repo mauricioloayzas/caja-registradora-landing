@@ -19,8 +19,8 @@ useSeoMeta({
 
     <h2>1. Uso del servicio</h2>
     <p>
-      Al agendar una cita, verificar tu identidad o realizar un pago a través de Clichín, aceptás
-      estos términos. Sos responsable de que la información que proporciones (identificación,
+      Al agendar una cita, verificar tu identidad o realizar un pago a través de Clichín, aceptas
+      estos términos. Eres responsable de que la información que proporciones (identificación,
       contacto) sea veraz.
     </p>
 
@@ -97,7 +97,7 @@ useSeoMeta({
 
     <h2>5. Comunicaciones</h2>
     <p>
-      Al proporcionar tu correo electrónico o número de WhatsApp, aceptás recibir notificaciones
+      Al proporcionar tu correo electrónico o número de WhatsApp, aceptas recibir notificaciones
       relacionadas con tus citas, pedidos y órdenes de trabajo (confirmación, cambios de estado,
       recordatorios) del negocio con el que interactuaste.
     </p>
@@ -105,7 +105,7 @@ useSeoMeta({
     <h2>6. Limitación de responsabilidad</h2>
     <p>
       Clichín provee la infraestructura tecnológica; la relación comercial (el servicio agendado,
-      el producto facturado) es entre vos y el negocio correspondiente.
+      el producto facturado) es entre tú y el negocio correspondiente.
     </p>
 
     <h2>7. Contacto</h2>
