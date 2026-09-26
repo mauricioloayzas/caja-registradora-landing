@@ -94,6 +94,35 @@ useSeoMeta({
     </section>
 
     <section class="section">
+      <h2>Complementos</h2>
+      <p>Sumá funciones extra sobre tu plan activo, según el rubro de tu negocio.</p>
+      <p class="plans-tax-note"><strong>Los complementos no se contratan solos</strong> — necesitás tener un plan (Negocio, Profesional o Salud) activo para poder agregarlos.</p>
+      <div class="plans-grid">
+        <div class="plan-card">
+          <span class="plan-badge">Complemento</span>
+          <h3 class="plan-name">Tienda online</h3>
+          <p class="plan-price">$4.99<span>/mes + impuestos</span></p>
+          <p class="plan-audience">Vendé tus productos en línea con carrito de compras.</p>
+          <ul>
+            <li>Tienda pública con carrito de compras, lista para compartir con tus clientes</li>
+            <li>Facturación y asiento contable automáticos al confirmarse cada pago</li>
+          </ul>
+        </div>
+
+        <div class="plan-card">
+          <span class="plan-badge">Complemento</span>
+          <h3 class="plan-name">Control de pedidos</h3>
+          <p class="plan-price">$4.99<span>/mes + impuestos</span></p>
+          <p class="plan-audience">Para imprentas, talleres de estampado, floristerías y fábricas artesanales.</p>
+          <ul>
+            <li>Recibí y gestioná pedidos de trabajo a medida, desde tu panel o desde un formulario público</li>
+            <li>Plantilla de columnas configurable según lo que necesites registrar de cada pedido</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
       <div class="highlight">
         <span class="badge">Para contadores</span>
         <p class="plan-price">$0<span>/siempre</span></p>
