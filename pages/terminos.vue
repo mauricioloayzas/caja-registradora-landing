@@ -111,7 +111,7 @@ useSeoMeta({
     <h2>7. Contacto</h2>
     <p>
       Mauricio Antonio Loayza Sánchez (persona natural) — RUC 0925491128001 — Guayaquil, Guayas, Ecuador<br>
-      Correo: <a href="mailto:clichinapp@mauloasan.com">clichinapp@mauloasan.com</a>
+      Correo: <a href="mailto:info@clichin.app">info@clichin.app</a>
     </p>
   </main>
 </template>

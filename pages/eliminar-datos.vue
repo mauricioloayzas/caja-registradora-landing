@@ -17,7 +17,7 @@ useSeoMeta({
 
     <h2>1. Cómo solicitar la eliminación</h2>
     <p>
-      Envía un correo a <a href="mailto:clichinapp@mauloasan.com">clichinapp@mauloasan.com</a>
+      Envía un correo a <a href="mailto:info@clichin.app">info@clichin.app</a>
       con el asunto "Eliminación de datos", indicando:
     </p>
     <ul>
@@ -44,7 +44,7 @@ useSeoMeta({
     <h2>4. Contacto</h2>
     <p>
       Mauricio Antonio Loayza Sánchez (persona natural) — RUC 0925491128001 — Guayaquil, Guayas, Ecuador<br>
-      Correo: <a href="mailto:clichinapp@mauloasan.com">clichinapp@mauloasan.com</a>
+      Correo: <a href="mailto:info@clichin.app">info@clichin.app</a>
     </p>
   </main>
 </template>

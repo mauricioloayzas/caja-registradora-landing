@@ -64,14 +64,14 @@ useSeoMeta({
     <h2>5. Tus derechos</h2>
     <p>
       Puedes solicitar acceso, corrección o eliminación de tus datos personales escribiendo a
-      <a href="mailto:clichinapp@mauloasan.com">clichinapp@mauloasan.com</a>. Responderemos
+      <a href="mailto:info@clichin.app">info@clichin.app</a>. Responderemos
       conforme a lo previsto en la Ley Orgánica de Protección de Datos Personales de Ecuador.
     </p>
 
     <h2>6. Contacto</h2>
     <p>
       Mauricio Antonio Loayza Sánchez (persona natural) — RUC 0925491128001 — Guayaquil, Guayas, Ecuador<br>
-      Correo: <a href="mailto:clichinapp@mauloasan.com">clichinapp@mauloasan.com</a>
+      Correo: <a href="mailto:info@clichin.app">info@clichin.app</a>
     </p>
   </main>
 </template>
