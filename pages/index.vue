@@ -43,7 +43,7 @@ useSeoMeta({
 
     <section class="section">
       <h2>Planes</h2>
-      <p>Elige el plan según lo que necesita tu negocio. Todos incluyen facturación electrónica SRI, contabilidad NIIF e inventario como base, con <strong>usuarios de tu equipo y mensajes de WhatsApp ilimitados</strong>, sin topes por volumen.</p>
+      <p>Elige el plan según lo que necesita tu negocio. Todos incluyen facturación electrónica SRI, contabilidad NIIF e inventario como base, con <strong>usuarios de tu equipo y mensajes de WhatsApp o Telegram ilimitados</strong>, sin topes por volumen.</p>
       <p class="plans-tax-note"><strong>Todos los precios son más impuestos (IVA).</strong></p>
       <div class="plans-grid">
         <div class="plan-card">
@@ -55,7 +55,7 @@ useSeoMeta({
           <ul>
             <li>Facturación electrónica SRI: facturas, notas de crédito y débito, guías de remisión, retenciones y liquidaciones de compra</li>
             <li>Proformas, con conversión a factura en un clic</li>
-            <li>Envío de tus comprobantes por email y WhatsApp, sin límite de mensajes</li>
+            <li>Envío de tus comprobantes por email, WhatsApp o Telegram, sin límite de mensajes</li>
             <li>Contabilidad NIIF: plan de cuentas, asientos automáticos y estados financieros para la Superintendencia de Compañías</li>
             <li>Inventario: productos, bodegas, proveedores y movimientos de stock</li>
             <li>Reportes</li>
